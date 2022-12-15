@@ -1,23 +1,25 @@
 package kodlamaio.hrms.entities.concrates;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 
 @Data
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="jobs")
-public class Jobs {
-
+@Entity
+@Table(name="knowledges")
+public class Knowledge {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="job_id")
-    private int id;
-    @Column(name="job_name")
+    @Column(name = "knowledge_id")
+    private Long id;
+    @Column(name = "knowledge_name")
     private String name;
+
+    @ManyToOne
+    private Cv cv;
 }

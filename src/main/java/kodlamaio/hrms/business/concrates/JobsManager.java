@@ -1,11 +1,11 @@
 package kodlamaio.hrms.business.concrates;
 
-import kodlamaio.hrms.business.requests.JobsRequest.CreateJobRequest;
-import kodlamaio.hrms.business.requests.JobsRequest.UpdateJobRequest;
+import kodlamaio.hrms.business.requests.JobRequest.CreateJobRequest;
+import kodlamaio.hrms.business.requests.JobRequest.UpdateJobRequest;
 import kodlamaio.hrms.business.responses.JobsResponse.GetAllJobsResponse;
 import kodlamaio.hrms.business.abstracts.JobsService;
 import kodlamaio.hrms.dataAccess.JobsRepository;
-import kodlamaio.hrms.entities.concrates.Jobs;
+import kodlamaio.hrms.entities.concrates.Job;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,10 +24,10 @@ public class JobsManager implements JobsService {
 
     @Override
     public List<GetAllJobsResponse> getAll() {
-        List<Jobs> jobs = jobsRepository.findAll();
+        List<Job> jobs = jobsRepository.findAll();
         List<GetAllJobsResponse> jobsResponses = new ArrayList<>();
 
-        for (Jobs job:jobs){
+        for (Job job:jobs){
             GetAllJobsResponse responseItem = new GetAllJobsResponse();
             responseItem.setId(job.getId());
             responseItem.setName(job.getName());
@@ -38,8 +38,8 @@ public class JobsManager implements JobsService {
     }
 
     @Override
-    public Jobs add(CreateJobRequest createJobRequest) throws Exception {
-        Jobs job = new Jobs();
+    public Job add(CreateJobRequest createJobRequest) throws Exception {
+        Job job = new Job();
         job.setName(createJobRequest.getName());
         if(job.getName().isEmpty()){
             throw new Exception("İş Adı Boş Bırakılamaz.");
@@ -54,10 +54,10 @@ public class JobsManager implements JobsService {
     }
 
     @Override
-    public Jobs update(int id, UpdateJobRequest updateJobRequest) {
-        Optional<Jobs> inDbJob = jobsRepository.findById(id);
+    public Job update(Long id, UpdateJobRequest updateJobRequest) {
+        Optional<Job> inDbJob = jobsRepository.findById(id);
         if(inDbJob.isPresent()){
-            Jobs job1 = inDbJob.get();
+            Job job1 = inDbJob.get();
             job1.setName(updateJobRequest.getName());
             return jobsRepository.save(job1);
         }
@@ -65,7 +65,7 @@ public class JobsManager implements JobsService {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Long id) {
         jobsRepository.deleteById(id);
     }
 }

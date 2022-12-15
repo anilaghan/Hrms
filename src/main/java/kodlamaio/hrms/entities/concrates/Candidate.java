@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+
 
 @Data
 @AllArgsConstructor
@@ -15,15 +17,18 @@ import javax.persistence.*;
 @PrimaryKeyJoinColumn(name = "candidate_id",referencedColumnName = "user_id" )
 public class Candidate extends User{
 
+
     @Column(name = "firstname")
     private String firstName;
     @Column(name = "lastname")
     private String lastName;
     @Column(name = "year_of_birth")
-    private String yearOfBirth;
+    private LocalDate yearOfBirth;
     @Column(name = "identity_number")
     private String identityNumber;
 
+    @OneToOne
+    private Cv cv;
 
 
 }

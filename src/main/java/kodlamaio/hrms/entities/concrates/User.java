@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+
 
 @Data
 @AllArgsConstructor
@@ -18,11 +20,14 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="user_id")
-    private int id;
+    private Long id;
     @Column(name="user_email")
+    @Email
     private String email;
     @Column(name="user_password")
     private String password;
+    @Transient
+    private String repeatPassword;
 
 
 }

@@ -1,4 +1,4 @@
-package kodlamaio.hrms.business.requests.CandidatesRequest;
+package kodlamaio.hrms.business.requests.CandidateRequest;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UpdateCandidateRequest {
-    private int id;
+    private Long id;
     private String firstName;
     private String lastName;
     private String yearOfBirth;

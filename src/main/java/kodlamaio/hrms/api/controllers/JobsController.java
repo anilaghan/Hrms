@@ -1,10 +1,10 @@
 package kodlamaio.hrms.api.controllers;
 
-import kodlamaio.hrms.business.requests.JobsRequest.CreateJobRequest;
-import kodlamaio.hrms.business.requests.JobsRequest.UpdateJobRequest;
+import kodlamaio.hrms.business.requests.JobRequest.CreateJobRequest;
+import kodlamaio.hrms.business.requests.JobRequest.UpdateJobRequest;
 import kodlamaio.hrms.business.responses.JobsResponse.GetAllJobsResponse;
 import kodlamaio.hrms.business.abstracts.JobsService;
-import kodlamaio.hrms.entities.concrates.Jobs;
+import kodlamaio.hrms.entities.concrates.Job;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,8 +33,8 @@ public class JobsController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Jobs> update(@PathVariable int id,@RequestBody UpdateJobRequest updateJobRequest){
-        Jobs job = jobsService.update(id, updateJobRequest);
+    public ResponseEntity<Job> update(@PathVariable Long id, @RequestBody UpdateJobRequest updateJobRequest){
+        Job job = jobsService.update(id, updateJobRequest);
         if(Objects.nonNull(job)){
             return new ResponseEntity<>(job, HttpStatus.OK);
         }
@@ -42,7 +42,7 @@ public class JobsController {
     };
 
     @DeleteMapping("/{id}")
-    public void deleteById(@PathVariable int id){
+    public void deleteById(@PathVariable Long id){
         jobsService.delete(id);
     }
 
