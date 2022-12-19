@@ -2,8 +2,8 @@ package kodlamaio.hrms.business.concrates;
 
 import kodlamaio.hrms.adapter.abstracts.ValidatePersonService;
 import kodlamaio.hrms.business.abstracts.CandidatesService;
-import kodlamaio.hrms.business.requests.CandidateRequest.CreatCandidateRequest;
-import kodlamaio.hrms.business.requests.CandidateRequest.UpdateCandidateRequest;
+import kodlamaio.hrms.business.requests.candidateRequest.CreatCandidateRequest;
+import kodlamaio.hrms.business.requests.candidateRequest.UpdateCandidateRequest;
 import kodlamaio.hrms.business.responses.CandidatesResponse.GetAllCandidatesResponse;
 import kodlamaio.hrms.core.utilities.Activation.concrates.EmailActivationManager;
 import kodlamaio.hrms.dataAccess.CandidatesRepository;

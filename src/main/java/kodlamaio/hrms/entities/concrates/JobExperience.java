@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Entity
 @Table(name="job_expreiances")
-public class JobExperiance {
+public class JobExperience {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="job_experiance_id")

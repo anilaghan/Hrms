@@ -1,7 +1,7 @@
 package kodlamaio.hrms.business.abstracts;
 
-import kodlamaio.hrms.business.requests.JobRequest.CreateJobRequest;
-import kodlamaio.hrms.business.requests.JobRequest.UpdateJobRequest;
+import kodlamaio.hrms.business.requests.jobRequest.CreateJobRequest;
+import kodlamaio.hrms.business.requests.jobRequest.UpdateJobRequest;
 import kodlamaio.hrms.business.responses.JobsResponse.GetAllJobsResponse;
 import kodlamaio.hrms.entities.concrates.Job;
 

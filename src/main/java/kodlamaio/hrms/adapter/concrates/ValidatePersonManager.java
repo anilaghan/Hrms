@@ -1,7 +1,7 @@
 package kodlamaio.hrms.adapter.concrates;
 
 import kodlamaio.hrms.adapter.abstracts.ValidatePersonService;
-import kodlamaio.hrms.business.requests.CandidateRequest.CreatCandidateRequest;
+import kodlamaio.hrms.business.requests.candidateRequest.CreatCandidateRequest;
 import kodlamaio.hrms.mernis.IQUKPSPublicSoap;
 import org.springframework.stereotype.Service;
 

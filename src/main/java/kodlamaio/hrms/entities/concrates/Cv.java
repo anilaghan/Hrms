@@ -34,7 +34,7 @@ public class Cv {
     @OneToMany
     private List<Education> educations;
     @OneToMany
-    private List<JobExperiance> jobExperiances;
+    private List<JobExperience> jobExperiences;
     @OneToMany
     private List<Language> languages;
     @OneToMany

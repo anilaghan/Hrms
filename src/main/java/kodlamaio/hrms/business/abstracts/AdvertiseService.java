@@ -1,9 +1,8 @@
 package kodlamaio.hrms.business.abstracts;
 
-import kodlamaio.hrms.business.requests.JobAdvertiseRequest.CreateJobAdvertiseRequest;
+import kodlamaio.hrms.business.requests.jobAdvertiseRequest.CreateJobAdvertiseRequest;
 import kodlamaio.hrms.entities.concrates.JobAdvertise;
 import kodlamaio.hrms.entities.dtos.AdvertiseWithEmployerDto;
-import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 import java.util.Set;

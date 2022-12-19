@@ -1,7 +1,7 @@
 package kodlamaio.hrms.business.concrates;
 
 import kodlamaio.hrms.business.abstracts.EmployerService;
-import kodlamaio.hrms.business.requests.EmployerRequest.CreateEmployerRequest;
+import kodlamaio.hrms.business.requests.employerRequest.CreateEmployerRequest;
 import kodlamaio.hrms.business.responses.EmployerResponse.GetAllEmployerResponse;
 import kodlamaio.hrms.core.utilities.Activation.concrates.EmailActivationManager;
 import kodlamaio.hrms.core.utilities.Activation.concrates.EmployeeActivationManager;

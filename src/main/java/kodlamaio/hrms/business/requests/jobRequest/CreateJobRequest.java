@@ -1,4 +1,4 @@
-package kodlamaio.hrms.business.requests.JobRequest;
+package kodlamaio.hrms.business.requests.jobRequest;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

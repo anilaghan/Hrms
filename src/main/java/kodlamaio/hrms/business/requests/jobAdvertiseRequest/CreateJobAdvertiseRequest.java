@@ -1,4 +1,4 @@
-package kodlamaio.hrms.business.requests.JobAdvertiseRequest;
+package kodlamaio.hrms.business.requests.jobAdvertiseRequest;
 
 import kodlamaio.hrms.entities.concrates.City;
 import lombok.AllArgsConstructor;

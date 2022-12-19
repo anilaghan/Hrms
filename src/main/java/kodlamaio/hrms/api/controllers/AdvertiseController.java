@@ -1,7 +1,7 @@
 package kodlamaio.hrms.api.controllers;
 
 import kodlamaio.hrms.business.abstracts.AdvertiseService;
-import kodlamaio.hrms.business.requests.JobAdvertiseRequest.CreateJobAdvertiseRequest;
+import kodlamaio.hrms.business.requests.jobAdvertiseRequest.CreateJobAdvertiseRequest;
 import kodlamaio.hrms.entities.concrates.JobAdvertise;
 import kodlamaio.hrms.entities.dtos.AdvertiseWithEmployerDto;
 import org.springframework.http.HttpStatus;

@@ -1,7 +1,7 @@
 package kodlamaio.hrms.business.concrates;
 
 import kodlamaio.hrms.business.abstracts.AdvertiseService;
-import kodlamaio.hrms.business.requests.JobAdvertiseRequest.CreateJobAdvertiseRequest;
+import kodlamaio.hrms.business.requests.jobAdvertiseRequest.CreateJobAdvertiseRequest;
 import kodlamaio.hrms.dataAccess.AdvertiseRepository;
 import kodlamaio.hrms.dataAccess.EmployerRepository;
 import kodlamaio.hrms.dataAccess.JobsRepository;
@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 
 @Service

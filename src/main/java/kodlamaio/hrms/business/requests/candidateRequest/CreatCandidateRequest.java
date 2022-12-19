@@ -1,4 +1,4 @@
-package kodlamaio.hrms.business.requests.EmployerRequest;
+package kodlamaio.hrms.business.requests.candidateRequest;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,20 +7,25 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateEmployerRequest {
+public class CreatCandidateRequest {
     @NotBlank
     @NotNull
-    private String companyName;
+    private String firstName;
     @NotBlank
     @NotNull
-    private String webSite;
-    @NotBlank
+    private String lastName;
+
     @NotNull
-    private String phone;
+    private LocalDate yearOfBirth;
+    @NotNull
+    @Size(min = 11 , max =11)
+    private String identityNumber;
     @NotBlank
     @NotNull
     @Email

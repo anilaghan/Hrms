@@ -1,7 +1,7 @@
 package kodlamaio.hrms.api.controllers;
 
 import kodlamaio.hrms.business.abstracts.CandidatesService;
-import kodlamaio.hrms.business.requests.CandidateRequest.CreatCandidateRequest;
+import kodlamaio.hrms.business.requests.candidateRequest.CreatCandidateRequest;
 import kodlamaio.hrms.business.responses.CandidatesResponse.GetAllCandidatesResponse;
 import kodlamaio.hrms.entities.concrates.Candidate;
 import org.springframework.web.bind.annotation.*;

@@ -1,10 +1,9 @@
 package kodlamaio.hrms.business.abstracts;
 
 
-import kodlamaio.hrms.business.requests.EmployerRequest.CreateEmployerRequest;
+import kodlamaio.hrms.business.requests.employerRequest.CreateEmployerRequest;
 import kodlamaio.hrms.business.responses.EmployerResponse.GetAllEmployerResponse;
 import kodlamaio.hrms.entities.concrates.Employer;
-import kodlamaio.hrms.entities.concrates.JobAdvertise;
 import kodlamaio.hrms.entities.dtos.AdvertiseWithEmployerDto;
 
 import java.util.List;

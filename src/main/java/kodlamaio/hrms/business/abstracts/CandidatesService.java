@@ -1,7 +1,7 @@
 package kodlamaio.hrms.business.abstracts;
 
-import kodlamaio.hrms.business.requests.CandidateRequest.CreatCandidateRequest;
-import kodlamaio.hrms.business.requests.CandidateRequest.UpdateCandidateRequest;
+import kodlamaio.hrms.business.requests.candidateRequest.CreatCandidateRequest;
+import kodlamaio.hrms.business.requests.candidateRequest.UpdateCandidateRequest;
 import kodlamaio.hrms.business.responses.CandidatesResponse.GetAllCandidatesResponse;
 import kodlamaio.hrms.entities.concrates.Candidate;
 

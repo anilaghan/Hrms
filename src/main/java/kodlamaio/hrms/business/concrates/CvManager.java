@@ -4,7 +4,6 @@ import kodlamaio.hrms.business.abstracts.CvService;
 import kodlamaio.hrms.business.requests.cvRequest.CvCreateRequest;
 import kodlamaio.hrms.dataAccess.CandidatesRepository;
 import kodlamaio.hrms.dataAccess.CvRepository;
-import kodlamaio.hrms.entities.concrates.Candidate;
 import kodlamaio.hrms.entities.concrates.Cv;
 
 import org.springframework.stereotype.Service;
