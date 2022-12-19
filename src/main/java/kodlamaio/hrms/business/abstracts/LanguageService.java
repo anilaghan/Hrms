@@ -5,4 +5,6 @@ import kodlamaio.hrms.entities.concrates.Language;
 
 public interface LanguageService {
      Language add(CreateLanguageRequest createLanguageRequest);
+
+     void delete(Long id);
 }

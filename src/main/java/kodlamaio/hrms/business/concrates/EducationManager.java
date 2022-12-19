@@ -5,7 +5,10 @@ import kodlamaio.hrms.business.requests.educationRequest.CreateEducationRequest;
 import kodlamaio.hrms.dataAccess.EducationRepository;
 import kodlamaio.hrms.entities.concrates.Education;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class EducationManager implements EducationService {
@@ -27,5 +30,15 @@ public class EducationManager implements EducationService {
         education.setGraduateStatus(createEducationRequest.isGraduateStatus());
 
         return educationRepository.save(education);
+    }
+
+    @Override
+    public void delete(Long id) {
+        educationRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Education> getAllSorted() {
+        return educationRepository.findAll(Sort.by(Sort.Direction.DESC,"GraduateDate"));
     }
 }

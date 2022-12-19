@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CvCreateRequest {
+public class CreateCvRequest {
 
     private String photoLink;
     private String gitLink;

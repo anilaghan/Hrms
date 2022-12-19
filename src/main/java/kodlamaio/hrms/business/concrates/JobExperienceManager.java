@@ -5,7 +5,10 @@ import kodlamaio.hrms.business.requests.jobExperienceRequest.CreateJobExperience
 import kodlamaio.hrms.dataAccess.JobExperianceRepository;
 import kodlamaio.hrms.entities.concrates.JobExperience;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class JobExperienceManager implements JobExperienceService {
@@ -27,5 +30,15 @@ public class JobExperienceManager implements JobExperienceService {
         jobExperience.setEndDate(createJobExperienceRequest.getEndDate());
         jobExperience.setJobStatus(createJobExperienceRequest.isJobStatus());
         return jobExperianceRepository.save(jobExperience);
+    }
+
+    @Override
+    public void delete(Long id) {
+        jobExperianceRepository.deleteById(id);
+    }
+
+    @Override
+    public List<JobExperience> getAllSorted() {
+        return jobExperianceRepository.findAll(Sort.by(Sort.Direction.DESC,"EndDate"));
     }
 }

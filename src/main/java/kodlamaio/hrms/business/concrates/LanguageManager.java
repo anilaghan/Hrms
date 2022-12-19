@@ -21,4 +21,9 @@ public class LanguageManager implements LanguageService {
         language.setLanguageLevel(createLanguageRequest.getLanguageLevel());
         return languageRepository.save(language);
     }
+
+    @Override
+    public void delete(Long id) {
+        languageRepository.deleteById(id);
+    }
 }

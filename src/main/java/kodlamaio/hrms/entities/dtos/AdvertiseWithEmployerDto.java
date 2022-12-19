@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AdvertiseWithEmployerDto implements Comparable<AdvertiseWithEmployerDto>{
+public class AdvertiseWithEmployerDto{
     private Long id;
     private String companyName;
     private String jobPosition;
@@ -19,15 +19,4 @@ public class AdvertiseWithEmployerDto implements Comparable<AdvertiseWithEmploye
     private LocalDate lastApplicationDate;
     private boolean Status;
 
-    @Override
-    public int compareTo(AdvertiseWithEmployerDto o) {
-        if(this.getPublishDate().isBefore(o.getPublishDate())){
-            return 1;
-        }
-        else if(this.getPublishDate().isAfter(o.getPublishDate())){
-            return -1;
-        }else {
-            return 0;
-        }
-    }
 }

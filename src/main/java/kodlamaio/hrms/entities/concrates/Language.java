@@ -22,7 +22,8 @@ public class Language {
     @Column(name="language_level")
     private LanguageLevel languageLevel;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "cv_id")
     private Cv cv;
 
 

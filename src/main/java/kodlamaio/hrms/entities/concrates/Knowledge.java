@@ -20,6 +20,7 @@ public class Knowledge {
     @Column(name = "knowledge_name")
     private String name;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "cv_id")
     private Cv cv;
 }

@@ -16,6 +16,7 @@ public class Education {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "education_id")
     private Long id;
     @Column(name = "school_name")
     private String schoolName;
@@ -28,6 +29,7 @@ public class Education {
     @Column(name="graduate_status")
     private boolean graduateStatus;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "cv_id")
     private Cv cv;
 }

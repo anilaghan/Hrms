@@ -15,7 +15,7 @@ import java.time.LocalDate;
 public class JobExperience {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="job_experiance_id")
+    @Column(name="job_experience_id")
     private Long id;
     @Column(name="company_name")
     private String companyName;
@@ -28,6 +28,7 @@ public class JobExperience {
     @Column(name="job_status")
     private boolean jobStatus;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "cv_id")
     private Cv cv;
 }

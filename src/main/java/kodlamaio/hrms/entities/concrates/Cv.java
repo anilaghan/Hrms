@@ -29,15 +29,16 @@ public class Cv {
     private String textArea;
 
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "candidate_id")
     private Candidate candidate;
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "cv")
     private List<Education> educations;
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "cv")
     private List<JobExperience> jobExperiences;
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "cv")
     private List<Language> languages;
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "cv")
     private List<Knowledge> knowledges;
 
 

@@ -27,7 +27,7 @@ public class Candidate extends User{
     @Column(name = "identity_number")
     private String identityNumber;
 
-    @OneToOne
+    @OneToOne(mappedBy = "candidate")
     private Cv cv;
 
 
