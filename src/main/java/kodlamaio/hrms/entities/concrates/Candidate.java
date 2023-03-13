@@ -1,6 +1,7 @@
 package kodlamaio.hrms.entities.concrates;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,7 +29,8 @@ public class Candidate extends User{
     private String identityNumber;
 
     @OneToOne(mappedBy = "candidate")
-    private Cv cv;
+    @JsonIgnore
+    private Resume resume;
 
 
 }

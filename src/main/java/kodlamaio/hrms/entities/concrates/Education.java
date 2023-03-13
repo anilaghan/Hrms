@@ -1,5 +1,6 @@
 package kodlamaio.hrms.entities.concrates;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -29,7 +30,5 @@ public class Education {
     @Column(name="graduate_status")
     private boolean graduateStatus;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cv_id")
-    private Cv cv;
+
 }

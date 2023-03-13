@@ -1,10 +1,12 @@
 package kodlamaio.hrms.entities.concrates;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -22,9 +24,11 @@ public class Language {
     @Column(name="language_level")
     private LanguageLevel languageLevel;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cv_id")
-    private Cv cv;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Resume resume;
+
+
+
 
 
 

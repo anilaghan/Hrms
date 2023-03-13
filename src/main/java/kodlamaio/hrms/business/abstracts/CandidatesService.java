@@ -13,6 +13,7 @@ public interface CandidatesService {
     Candidate update(Long id, UpdateCandidateRequest updateCandidateRequest);
     void delete(Long id);
 
+    Candidate getCandidateById(Long id);
 
 
 

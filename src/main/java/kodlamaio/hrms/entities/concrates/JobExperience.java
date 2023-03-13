@@ -1,5 +1,6 @@
 package kodlamaio.hrms.entities.concrates;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="job_expreiances")
+@Table(name="job_expreiences")
 public class JobExperience {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +29,5 @@ public class JobExperience {
     @Column(name="job_status")
     private boolean jobStatus;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cv_id")
-    private Cv cv;
+
 }

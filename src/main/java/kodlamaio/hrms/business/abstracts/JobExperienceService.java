@@ -12,4 +12,6 @@ public interface JobExperienceService {
     void delete(Long id);
 
     List<JobExperience> getAllSorted();
+
+    JobExperience jobExperienceGetById(Long id);
 }

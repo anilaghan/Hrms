@@ -12,4 +12,6 @@ public interface EducationService {
     void delete(Long id);
 
     List<Education> getAllSorted();
+
+    Education getEducationById(Long id);
 }

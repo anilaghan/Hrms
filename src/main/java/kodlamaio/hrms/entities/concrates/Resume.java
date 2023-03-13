@@ -3,8 +3,11 @@ package kodlamaio.hrms.entities.concrates;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -13,7 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name="cv")
-public class Cv {
+public class Resume {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,14 +35,18 @@ public class Cv {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "candidate_id")
     private Candidate candidate;
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "cv")
+
+    @OneToMany
+
     private List<Education> educations;
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "cv")
+    @OneToMany
+
     private List<JobExperience> jobExperiences;
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "cv")
-    private List<Language> languages;
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "cv")
-    private List<Knowledge> knowledges;
+    @OneToMany(mappedBy = "resume")
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private List<Language> languages = new ArrayList<>();
+    @OneToMany
+    private List<Skills> skills;
 
 
 

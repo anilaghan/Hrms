@@ -41,4 +41,9 @@ public class EducationManager implements EducationService {
     public List<Education> getAllSorted() {
         return educationRepository.findAll(Sort.by(Sort.Direction.DESC,"GraduateDate"));
     }
+
+    @Override
+    public Education getEducationById(Long id) {
+        return educationRepository.findById(id).orElseThrow();
+    }
 }

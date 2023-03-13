@@ -73,4 +73,9 @@ public class CandidatesManager implements CandidatesService {
     public void delete(Long id) {
 
     }
+
+    @Override
+    public Candidate getCandidateById(Long id) {
+        return candidatesRepository.findById(id).orElseThrow();
+    }
 }

@@ -1,9 +1,9 @@
 package kodlamaio.hrms.entities.concrates;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 
@@ -12,7 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name="knowledges")
-public class Knowledge {
+public class Skills {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "knowledge_id")
@@ -20,7 +20,5 @@ public class Knowledge {
     @Column(name = "knowledge_name")
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cv_id")
-    private Cv cv;
+
 }

@@ -1,10 +1,12 @@
 package kodlamaio.hrms.business.abstracts;
 
 import kodlamaio.hrms.business.requests.knowledgeRequest.CreateKnowledgeRequest;
-import kodlamaio.hrms.entities.concrates.Knowledge;
+import kodlamaio.hrms.entities.concrates.Skills;
 
 public interface KnowledgeService {
-    Knowledge add(CreateKnowledgeRequest createKnowledgeRequest);
+    Skills add(CreateKnowledgeRequest createKnowledgeRequest);
 
     void delete(long id);
+
+    Skills getKnowledgeById(Long id);
 }

@@ -41,4 +41,9 @@ public class JobExperienceManager implements JobExperienceService {
     public List<JobExperience> getAllSorted() {
         return jobExperianceRepository.findAll(Sort.by(Sort.Direction.DESC,"EndDate"));
     }
+
+    @Override
+    public JobExperience jobExperienceGetById(Long id) {
+        return jobExperianceRepository.findById(id).orElseThrow();
+    }
 }

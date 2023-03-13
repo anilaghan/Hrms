@@ -30,4 +30,10 @@ public class CandidatesController {
     public Candidate add( @RequestBody @Valid CreatCandidateRequest creatCandidateRequest){
     return  candidatesService.add(creatCandidateRequest);
     }
+
+    @GetMapping("/{id}")
+
+    public Candidate getCandidateById(@PathVariable Long id){
+        return candidatesService.getCandidateById(id);
+    }
 }
